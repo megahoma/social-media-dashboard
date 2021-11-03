@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
+export const Container = styled.div`
+  margin-top: 50px;
+  padding: 0 35px 100px 35px;
+`
+export const Title = styled.h1`
+  color: ${(props) => props.theme.colors.primary};
+  padding: 0 0 35px 0;
+`
 export const Section = styled.section`
   & {
     display: grid;
     grid-row-gap: 25px;
-    margin-top: -125px;
-    padding: 0 35px 0 35px;
   }
 
   @media (min-width: 560px) {
@@ -22,14 +28,9 @@ export const Section = styled.section`
   }
 `
 
-export const Article = styled.article.attrs((props) => ({
-  socialNetwork: props.socialNetwork,
-}))`
+export const Article = styled.article`
   & {
-    position: relative;
-    overflow: hidden;
-    padding: 35px 0 35px 0;
-    text-align: center;
+    padding: 35px 30px 0 30px;
     border-radius: 5px;
     background: ${(props) => props.theme.colors.cardBackground}};
     cursor: pointer;
@@ -38,27 +39,16 @@ export const Article = styled.article.attrs((props) => ({
   &:hover {
     background: ${(props) => props.theme.colors.cardHoverBackground}};
   }
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: var(--${(props) => props.socialNetwork});
-  }
 `
-
 export const IconLabel = styled.p`
   & {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
     margin-bottom: 13px;
 
     font-weight: 700;
-    color: ${(props) => props.theme.colors.secondary}};;
+    color: ${(props) => props.theme.colors.secondary}};
   }
   
   & img {
@@ -67,22 +57,19 @@ export const IconLabel = styled.p`
     margin-right: 10px;
   }
 `
-
-export const TotalLabel = styled.p`
-  height: 80px;
-  font-size: 65px;
+export const TotalContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 35px;
+`
+export const TotalLabel = styled.span`
+  height: 45px;
+  font-size: 40px;
   font-weight: 700;
   color: ${(props) => props.theme.colors.primary}};
 `
-
-export const DescriptionLabel = styled.p`
-  margin-bottom: 25px;  
-  text-transform: uppercase;  
-  letter-spacing: 6px;
-  color: ${(props) => props.theme.colors.secondary}};
-`
-
-export const TodayLabel = styled.p.attrs((props) => ({
+export const TotalTodayLabel = styled.p.attrs((props) => ({
   color: props.color,
 }))`
   & {
