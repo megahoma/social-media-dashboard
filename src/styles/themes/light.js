@@ -8,6 +8,7 @@ export default {
 
     background: 'hsl(0, 0%, 100%)',
     topBackgroun: 'hsl(225, 100%, 98%)',
+    cardBackground: 'hsl(227, 47%, 96%)',
     text: '#000',
   },
 }

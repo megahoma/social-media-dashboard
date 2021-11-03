@@ -9,6 +9,7 @@ import dark from './styles/themes/dark'
 
 import GlobalStyle from './styles/global'
 import Header from './components/Header'
+import AccountsCardList from './components/Accounts-card-list'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -27,6 +28,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header toggleTheme={toggleTheme} />
+      <AccountsCardList />
     </ThemeProvider>
   )
 }
