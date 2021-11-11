@@ -13,3 +13,5 @@
 `npm i`
 
 `npm run server` and `npm run start`
+
+### Coded by [megahoma](https://github.com/megahoma)
